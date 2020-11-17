@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+// import "./styles.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+export default function App() {
+ let [user,setUser] = React.useState('');
+ let [userScore,setUserScore] = React.useState(0);
+ let [counter,setCounter] = React.useState(0);
+ const changeHandler = (e) => setUser(e.target.value);
+ const clickHandler = () => {
+   // api call goes here
+   fetch('/cobalt-api',{method : 'POST', body : JSON.stringify({user,userScore})});
+   setCounter(0);
+ }
+   const handleScore = () => { if(counter < 10) { setCounter((count) => (count + 1));
+     setUserScore(Math.floor(Math.random() * 200 - 100)); } }
+     return (<div className="App">
+          <label htmlFor="username"> name </label>
+          <input name="username" value={user} onChange={changeHandler} />
+          <button onClick={clickHandler}> send</button>
+          <button onClick={handleScore}> generate score </button>
+          <p> counter {counter}</p>
+          <p> {userScore} </p>
+     </div> );
+   }
