@@ -1,0 +1,21 @@
+.wrapper {
+  border : solid 1px #248bd2;
+  padding : 5px;
+  box-sizing: border-box;
+}
+.sortButtons {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.buttonsWrapper {
+  margin-bottom: 12px;
+}
+
+@media screen and (min-width : 501px){
+  .sortButtons {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

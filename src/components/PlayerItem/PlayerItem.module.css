@@ -1,0 +1,12 @@
+.playerItem {
+  display: flex;
+}
+.name {
+  width : 50%;
+}
+.totalPoints {
+  width : 25%;
+}
+.avg {
+  width : 25%;
+}

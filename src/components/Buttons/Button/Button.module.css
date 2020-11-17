@@ -1,0 +1,26 @@
+.primaryButton {
+  background-color: #ffffff;
+  color: #248bd2;
+  text-transform: uppercase;
+  font-weight: 500;
+  border : solid 1px #248bd2;
+  border-radius: 6px;
+  width : 230px;
+  height : 40px;
+  outline: none;
+  cursor: pointer;
+}
+
+.secondaryButton {
+  background-color: #ffffff;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 500;
+  border : solid 1px #4000d0;
+  background-color: #4000d0;
+  border-radius: 6px;
+  width : 230px;
+  height : 40px;
+  outline: none;
+  cursor: pointer;
+}
